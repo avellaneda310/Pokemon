@@ -6,6 +6,7 @@ import Loading from './Loading/Loading';
 const Pokemones = () => {
     const [pokemones, cargando] = useGet({ url: "https://pokeapi.co/api/v2/pokemon" });
     return (
+
         <>
             <div className="container">
                 <div className="row">
@@ -15,8 +16,8 @@ const Pokemones = () => {
                     {cargando ? (
                         <Loading />
                     ) : (
-                        pokemones.map(poke => (
-                            <Poke key={poke.name} {...poke} />
+                        pokemones.map(pokemon => (
+                            <Poke key={pokemon.id} {...pokemon} />
                         )
                         )
                     )

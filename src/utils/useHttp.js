@@ -23,3 +23,7 @@ const useGet = ({intialState = [], url = {}}) => {
 }
  
 export default useGet;
+
+
+
+
